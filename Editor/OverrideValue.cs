@@ -11,9 +11,6 @@ namespace Kogane
         [SerializeField]                 private bool   m_isOverride;
         [SerializeField]                 private T      m_value;
 
-        public bool IsOverride => m_isOverride;
-        public T    Value      => m_value;
-
         public OverrideValue( string label, T defaultValue )
         {
             m_label = label;
@@ -28,6 +25,6 @@ namespace Kogane
             }
         }
 
-        public static implicit operator T( OverrideValue<T> value ) => value.Value;
+        public static implicit operator T( OverrideValue<T> value ) => value.m_value;
     }
 }
