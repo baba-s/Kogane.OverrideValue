@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Kogane.Internal
 {
     [CustomPropertyDrawer( typeof( OverrideValue<> ), true )]
-    internal sealed class OverrideValueBaseDrawer : PropertyDrawer
+    internal sealed class OverrideValueDrawer : PropertyDrawer
     {
         public override void OnGUI( Rect position, SerializedProperty property, GUIContent label )
         {
